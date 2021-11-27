@@ -163,6 +163,8 @@ a.current.link.finger {
   color: var(--accent-color);
 }
 
+/* Contacts header */
+
 .section-contacts {
   display: flex;
   justify-content: flex-start;
@@ -185,7 +187,7 @@ a.current.link.finger {
   color: var(--accent-color);
 }
 
-.contact {
+.item a {
   display: flex;
   align-items: center;
   padding: 32px 0;
@@ -197,44 +199,27 @@ a.current.link.finger {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.section-contacts .item:hover,
-.section-contacts .item:focus {
+.item a:hover,
+.item a:focus {
   color: var(--accent-color);
 }
 
-.contact:hover,
-.contact:focus {
+.section-contacts svg {
+  margin-right: 10px;
+
+  fill: var(--extra-text-color);
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.section-contacts a:hover svg,
+.section-contacts a:focus svg {
+  fill: var(--accent-color);
+}
+
+.section-contacts a:hover,
+.section-contacts a:focus {
   color: var(--accent-color);
-}
-
-.icon-mail {
-  display: inline-block;
-  justify-content: flex-start;
-  align-items: center;
-  margin-right: 10px;
-  cursor: pointer;
-  fill: var(--title-text-color);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.contact:hover .icon-mail,
-.contact:focus .icon-mail {
-  fill: var(--accent-color);
-}
-
-.icon-mobile {
-  display: inline-block;
-  justify-content: flex-start;
-  align-items: center;
-  margin-right: 10px;
-  cursor: pointer;
-  fill: var(--title-text-color);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.contact:hover .icon-mobile,
-.contact:focus .icon-mobile {
-  fill: var(--accent-color);
 }
 
 /* Footer */
@@ -257,8 +242,13 @@ a.current.link.finger {
 }
 
 .footer-logo {
-  font-family: "Raleway", sans-serif;
-  text-decoration: none;
+  display: inline-block;
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  margin-bottom: 20px;
   color: var(--accent-color);
 }
 
@@ -275,62 +265,46 @@ a.current.link.finger {
 
 /* Contacts */
 
-.contacts {
+.adress-location {
   font-family: Roboto, sans-serif;
   font-style: normal;
-  display: block;
-  margin-top: 20px;
-  margin-right: 70px;
-}
-
-.contacts .address {
-  margin-bottom: 9px;
-}
-
-.contacts .address:last-child {
-  margin-bottom: 0;
-}
-
-.contacts .item {
   font-weight: 400;
   font-size: 14px;
-  line-height: 1.71;
+  line-height: 1.8;
   letter-spacing: 0.03em;
+  margin-right: 70px;
+  margin-bottom: 9px;
 
   color: var(--primary-white-color);
 }
 
-.contacts .item:hover,
-.contacts .item:focus {
-  cursor: pointer;
-}
-
-.contacts .mail {
+.address-contacts {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+  text-decoration: none;
+}
 
+.address-contacts li {
+  margin-bottom: 9px;
+}
+
+.address-contacts li:last-child {
+  margin-bottom: 0px;
+}
+
+.address-contacts a {
   color: rgba(255, 255, 255, 0.6);
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.contacts .tel {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.contacts .mail:hover,
-.contacts .mail:focus {
-  cursor: pointer;
-}
-
-.contacts .tel:hover,
-.contacts .tel:focus {
-  cursor: pointer;
+.address-contacts a:hover,
+.address-contacts a:focus {
+  color: var(--accent-color);
 }
 
 /* Footer social links */
@@ -396,10 +370,6 @@ a.current.link.finger {
   margin-left: 93px;
 }
 
-.cellar-email .form {
-  display: flex;
-}
-
 .cellar-text {
   display: inline-block;
 
@@ -408,19 +378,24 @@ a.current.link.finger {
   line-height: 1.2;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  margin-bottom: 20px;
 
   color: var(--primary-white-color);
-
-  margin-bottom: 20px;
 }
 
-.field {
+.cellar-email form {
+  display: flex;
+}
+
+.cellar-email input {
+  font-size: 14px;
   width: 358px;
   height: 50px;
   padding: 15px 16px;
   border-radius: 4px;
   border: 1px solid rgba(255, 255, 255, 0.3);
-  background-color: #2f303a;
+  color: rgba(255, 255, 255, 0.6);
+  background-color: transparent;
 }
 
 .field:focus-visible {
@@ -433,17 +408,14 @@ a.current.link.finger {
   font-size: 16px;
   line-height: 1.2;
   letter-spacing: 0.03em;
-
-  color: rgba(255, 255, 255, 0.6);
 }
 
 .picture {
   width: 24px;
   height: 24px;
+  margin-left: 10px;
 
   fill: var(--primary-white-color);
-
-  margin-left: 10px;
 }
 
 .btn-text {
@@ -453,7 +425,7 @@ a.current.link.finger {
 
   width: 200px;
   height: 50px;
-  padding: 10px 0px;
+  padding: 0;
   margin-left: 12px;
 
   border-radius: 4px;

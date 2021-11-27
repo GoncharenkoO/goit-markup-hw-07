@@ -45,13 +45,13 @@
 
         <ul class="section-contacts">
           <li class="item">
-            <a class="contact" href="mailto:info@devstudio.com"
-              ><svg class="icon-mail" width="16" height="12"><use href=./images/symbol-defs.svg#icon-mail></use>
+            <a href="mailto:info@devstudio.com"
+              ><svg aria-label="email" width="16" height="12"><use href=./images/symbol-defs.svg#icon-mail></use>
             </svg>info@devstudio.com</a>
           </li>
           <li class="item">
-            <a class="contact" href="tel:+38 096 111 11 11"
-              ><svg class="icon-mobile" width="16" height="12"><use href=./images/symbol-defs.svg#icon-mobile></use>
+            <a href="tel:+380961111111"
+              ><svg aria-label="tel" width="16" height="12"><use href=./images/symbol-defs.svg#icon-mobile></use>
             </svg>+38 096 111 11 11</a>
           </li>
         </ul>
@@ -412,25 +412,18 @@
     <footer class="footer">
       <div class="keyword container">
         <div class="section-info">
-          <a href="./index.html" class="footer-logo"
-              >Web<span class="footer">Studio</span></a>
-            <address class="contacts">
-              <ul class="address">
-                <li class="address item">
-                  <p clas="address">г. Киев, пр-т Леси Украинки, 26</p>
-                </li>
-                <li class="address mail">
-                  <a class="mail" href="mailto:info@example.com"
-                    >info@example.com</a
-                  >
-                </li>
-                <li class="address tel">
-                  <a class="tel" href="tel:+38 099 111 11 11"
-                    >+38 099 111 11 11</a
-                  >
-                </li>
-              </ul>
+          <a class="footer-logo" href="./index.html">Web<span class="footer">Studio</span></a>
+            <address class="adress-location">
+              <p>г. Киев, пр-т Леси Украинки, 26</p>
             </address>
+            <ul class="address-contacts">
+              <li>
+                <a href="mailto:info@example.com">info@example.com</a>
+              </li>      
+              <li>
+                <a href="tel:+380991111111">+38 099 111 11 11</a>
+              </li>
+            </ul>
         </div>
           <div class="social-list">
             <p class="footer-text">ПРИСОЕДИНЯЙТЕСЬ</p>
@@ -467,9 +460,8 @@
           </div>
         <div class="cellar-email">
           <p class="cellar-text">Подпишитесь на рассылку</p>
-          <form class="form input">
-              <label for="form-email" class="form-icon"></label>
-              <input class="field" type="email" name="email" id="form-email" placeholder="E-mail" />
+          <form>
+              <input type="email" name="email" id="form-email" placeholder="E-mail" />
               <button type="submit" class="btn-text">Подписаться
                 <svg class="picture" width="24" height="24">
                   <use href="./images/symbol-defs.svg#icon-icon-send"></use>
@@ -491,40 +483,47 @@
           </button>     
             <form class="modal-form">
               <p class="form-title">Оставьте свои данные, мы вам перезвоним</p>
-              <label class="modal-label" for="name">Имя
-                <input class="modal-field" type="txt" name="user-name" id="name" placeholder=""  />
-                  <svg class="modal-picture" width="18" height="18">
-                    <use href="./images/symbol-defs.svg#icon-person"></use>
-                  </svg>
-              </label>
-              <label class="modal-label" for="tel" >Телефон
-                <input class="modal-field" type="txt" name="tel" id="tel"  />
-                  <svg class="modal-picture" width="18" height="18">
-                    <use href="./images/symbol-defs.svg#icon-phone"></use>
-                  </svg>
-              </label>
-              <label class="modal-label modal-label--mb20" for="mail"> Почта
-                <input class="modal-field" type="txt" name="mail" id="mail" />
-                  <svg class="modal-picture" width="18" height="18">
-                    <use href="./images/symbol-defs.svg#icon-email"></use>
-                  </svg>
-              </label>
-              <label class="modal-label" for="commentary">Комментарий
-                <textarea class="modal-comment" name="commentary" id="commentary" rows="5" placeholder="Введите текст"></textarea>
-              </label>
-              <div class="checkbox">
-                <label class="checkbox-input" for="checkbox">
-                  <input class="checkbox-visually-hidden" type="checkbox" id="checkbox" />
-                  <svg class="checkbox-icon" width="16" height="16">
-                      <use href="./images/symbol-defs.svg#icon-vector"></use>
-                    </svg>
-                </label>
-                <p class="modal-text">
-                  Соглашаюсь с рассылкой и принимаю&nbsp;
-                </p>
-                <a class="modal-link" href="">Условия договора</a>
-              </div>
-              <button class="modal-btn" type="submit">Отправить</button>
+
+              <div class="form-group" role="list">
+                <div class="form-box">
+                  <label for="name">Имя</label>
+                    <input class="modal-field" type="text" name="username" id="name" />
+                      <svg class="modal-picture" width="18" height="18">
+                        <use href="./images/symbol-defs.svg#icon-person"></use>
+                      </svg>
+                </div>
+                <div class="form-box">
+                  <label for="phone">Телефон</label>
+                    <input class="modal-field" type="tel" name="phone" id="phone" />
+                      <svg class="modal-picture" width="18" height="18">
+                        <use href="./images/symbol-defs.svg#icon-phone"></use>
+                      </svg>
+                </div>
+                <div class="form-box">
+                  <label for="mail">Почта</label>
+                    <input class="modal-field" type="text" name="mail" id="mail" />
+                      <svg class="modal-picture" width="18" height="18">
+                        <use href="./images/symbol-defs.svg#icon-email"></use>
+                      </svg>
+                </div>
+                <div class="form-box">
+                  <label for="commentary">Комментарий</label>
+                  <textarea class="modal-comment" name="commentary" id="commentary" rows="5" placeholder="Введите текст"></textarea>
+                </div>
+                <div class="checkbox">
+                  <label class="checkbox-label" for="checkbox">
+                    <input class="modal-checkbox" type="checkbox" id="checkbox" />
+                    <span class="checkbox-icon">
+                      <svg width="16" height="15">
+                          <use href="./images/symbol-defs.svg#icon-vector"></use>
+                      </svg>
+                    </span>
+                    <span class="modal-text">Соглашаюсь с рассылкой и принимаю&nbsp;
+                    <a class="modal-link" href="">Условия договора</a></span>
+                  </label>
+                </div>
+                <button class="modal-btn" type="submit">Отправить</button>
+                </div>
             </form>
       </div>     
     </div>
