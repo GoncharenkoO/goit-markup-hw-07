@@ -1,68 +1,4 @@
-@charset "UTF-8";
-.filter {
-  color: var(--primary-text-color);
-}
-
-.section-filter .project {
-  text-decoration: none;
-  list-style: none;
-}
-
-.filter-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  margin-bottom: 50px;
-}
-
-.section .item {
-  margin-right: 8px;
-}
-
-.section .item:last-child {
-  margin-right: 0;
-}
-
-.section .item:last-child {
-  margin-right: 0;
-}
-
-.button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  text-align: center;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.6;
-
-  letter-spacing: 0.03em;
-
-  top: 174px;
-  padding: 6px 22px 6px 22px;
-  border-radius: 4px;
-  color: var(--primary-text-color);
-  background-color: var(--buttom-text-color);
-  border-color: transparent;
-  box-shadow: none;
-  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.button:hover,
-.button:focus {
-  color: var(--primary-white-color);
-  background-color: var(--accent-color);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
-}
+/* Projects*/
 
 .projects {
   display: -webkit-box;
@@ -70,32 +6,25 @@
   display: flex;
   flex-wrap: wrap;
 }
-
 .projects .list {
   width: 370px;
 }
-
 .section .list {
   margin-right: 30px;
   margin-bottom: 30px;
 }
-
 .section .list:nth-child(3n + 3) {
   margin-right: 0;
 }
-
 .section .list:nth-child(n + 7) {
   margin-bottom: 0;
 }
-
 .section .list:last-child {
   margin-right: 0;
 }
-
 .section .list .product-actions {
   object-fit: cover;
 }
-
 .project {
   padding-top: 20px;
   padding-right: 24px;
@@ -103,43 +32,35 @@
   padding-bottom: 20px;
   text-decoration: none;
   list-style: none;
-
   background: var(--primary-white-color);
   border-right: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
   border-left: 1px solid var(--border-color);
 }
-
 .project .list {
   text-decoration: none;
   list-style: none;
 }
-
 .section .title {
   margin: 0;
   margin-bottom: 4px;
-
   font-weight: bold;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--primary-text-color);
 }
-
 .section .text {
   margin: 0;
-
   font-size: 16px;
   line-height: 1.9;
   letter-spacing: 0.03em;
   color: var(--title-text-color);
 }
-
 .box {
   position: relative;
   overflow: hidden;
 }
-
 .overlay {
   position: absolute;
   font-family: Roboto;
@@ -155,10 +76,8 @@
   bottom: 0;
   left: 0;
   padding: 63px 24px;
-
   color: var(--primary-white-color);
   background-color: rgba(33, 150, 243, 0.9);
-
   transform: translateY(101%);
   -webkit-transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
