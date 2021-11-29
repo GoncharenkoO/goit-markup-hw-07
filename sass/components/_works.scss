@@ -34,10 +34,10 @@
   margin: 0;
   margin-right: 30px;
   padding: 0;
-}
 
-.works-section .item:last-child {
-  margin-right: 0;
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 .item {

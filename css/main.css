@@ -282,7 +282,7 @@ header {
   letter-spacing: 0.02em;
 }
 
-.section-menu .item:last-child {
+.section-menu .item-info:last-child {
   margin-right: 0;
 }
 
@@ -316,8 +316,8 @@ a.current.link.finger {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.section-menu .item .finger:hover,
-.section-menu .item .finger:focus {
+.section-menu .item-info .finger:hover,
+.section-menu .item-info .finger:focus {
   color: var(--accent-color);
 }
 
@@ -344,11 +344,6 @@ a.current.link.finger {
   margin-right: 0;
 }
 
-.section-contacts .item-info:hover,
-.section-contacts .item-info:focus {
-  color: var(--accent-color);
-}
-
 .item-info a {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -363,11 +358,6 @@ a.current.link.finger {
   color: var(--title-text-color);
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.item-info a:hover,
-.item-info a:focus {
-  color: var(--accent-color);
 }
 
 .section-contacts svg {
@@ -444,8 +434,7 @@ a.current.link.finger {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.button.primary:hover,
-.button.primary:focus {
+.button:hover, .button:focus {
   background-color: #188ce8;
 }
 
@@ -705,15 +694,14 @@ a.current.link.finger {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.team-social-link:hover, .team-social-link:focus {
+  background-color: var(--accent-color);
+}
+
 .team-social-icon {
   fill: #afb1b8;
   -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.team-social-link:hover,
-.team-social-link:focus {
-  background-color: var(--accent-color);
 }
 
 .team-social-link:hover .team-social-icon,
@@ -721,7 +709,6 @@ a.current.link.finger {
   fill: var(--primary-white-color);
 }
 
-/* Company section */
 .company .section {
   margin-bottom: 94px;
 }
@@ -789,20 +776,15 @@ a.current.link.finger {
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.company-social-link:hover, .company-social-link:focus {
+  border-color: var(--accent-color);
+  fill: var(--accent-color);
+}
+
 .company-social-icon {
   fill: #afb1b8;
   -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.company-social-link:hover,
-.company-social-link:focus {
-  border-color: var(--accent-color);
-}
-
-.company-social-link:hover,
-.company-social-link:focus {
-  fill: var(--accent-color);
 }
 
 .company-social-link:hover .company-social-icon,
@@ -1078,6 +1060,10 @@ a.current.link.finger {
   background: #2f303a;
 }
 
+.footer:hover, .footer:focus {
+  cursor: pointer;
+}
+
 .keyword {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1104,13 +1090,7 @@ a.current.link.finger {
   color: var(--primary-white-color);
 }
 
-.footer:hover,
-.footer:focus {
-  cursor: pointer;
-}
-
 .adress-location {
-  font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -1122,7 +1102,6 @@ a.current.link.finger {
 }
 
 .address-contacts {
-  font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -1145,8 +1124,7 @@ a.current.link.finger {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.address-contacts a:hover,
-.address-contacts a:focus {
+.address-contacts a:hover, .address-contacts a:focus {
   color: var(--accent-color);
 }
 
@@ -1215,13 +1193,12 @@ a.current.link.finger {
   transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.footer-social-icon {
-  fill: var(--primary-white-color);
+.footer-social-link:hover, .footer-social-link:focus {
+  background-color: var(--accent-color);
 }
 
-.footer-social-link:hover,
-.footer-social-link:focus {
-  background-color: var(--accent-color);
+.footer-social-icon {
+  fill: var(--primary-white-color);
 }
 
 .cellar-email {
@@ -1331,8 +1308,7 @@ a.current.link.finger {
   cursor: pointer;
 }
 
-.btn-text:hover,
-.btn-text:focus {
+.btn-text:hover, .btn-text:focus {
   background-color: #188ce8;
 }
 
@@ -1529,13 +1505,12 @@ a.current.link.finger {
   resize: none;
 }
 
-.modal-comment:placeholder {
-  color: rgba(117, 117, 117, 0.5);
+.modal-comment:hover, .modal-comment:focus {
+  border-color: var(--accent-color);
 }
 
-.modal-comment:hover,
-.modal-comment:focus {
-  border-color: var(--accent-color);
+.modal-comment:placeholder {
+  color: rgba(117, 117, 117, 0.5);
 }
 
 .checkbox {
