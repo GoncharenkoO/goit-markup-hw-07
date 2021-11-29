@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -17,39 +17,41 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
     />
 
-     <link rel="stylesheet" href="./css/main.min.css" />
-    <link rel="stylesheet" href="./css/styles.min.css" />
-    <link rel="stylesheet" href="./css/modal.min.css" />
+    <link rel="stylesheet" href="./css/main.min.css" />
+    <!-- <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/modal.css" /> -->
   </head>
-  <body class="site">
-    <!-- Header container -->
+  <body>
+
+      <!-- Header container -->
     <header>
-      <div class="header__box container">
-        <!-- Logo header -->
-        <a class="header__logo" href="./index.html">Web<span class="logo">Studio</span></a>
-        <!-- Navigation -->
-        <nav class="site-nav">
-          <ul class="site-nav__section-menu">
-            <li class="site-nav__contact-item">
-              <a class="current link finger" href="./index.html">Студия</a>
+      <div class="container header-container">
+        <nav class="nav">
+          <a href="./index.html" class="logo"
+            >Web<span class="logo">Studio</span></a
+          >
+
+          <ul class="section-menu">
+            <li class="item-info">
+              <a href="./index.html" class="current link finger">Студия</a>
             </li>
-            <li class="site-nav__contact-item">
-              <a class="link finger" href="./portfolio.html">Портфолио</a>
+            <li class="item-info">
+              <a href="./portfolio.html" class="link finger">Портфолио</a>
             </li>
-            <li class="site-nav__contact-item">
-              <a class="link finger" href="">Контакты</a>
+            <li class="item-info">
+              <a href="" class="link finger">Контакты</a>
             </li>
           </ul>
         </nav>
 
-        <ul class="header__section-contacts">
-          <li class="site-nav__contact-item">
-            <a class="contact-link" href="mailto:info@devstudio.com"
+        <ul class="section-contacts">
+          <li class="item-info">
+            <a href="mailto:info@devstudio.com"
               ><svg aria-label="email" width="16" height="12"><use href=./images/symbol-defs.svg#icon-mail></use>
             </svg>info@devstudio.com</a>
           </li>
-          <li class="site-nav__contact-item">
-            <a class="contact-link" href="tel:+380961111111"
+          <li class="item-info">
+            <a href="tel:+380961111111"
               ><svg aria-label="tel" width="16" height="12"><use href=./images/symbol-defs.svg#icon-mobile></use>
             </svg>+38 096 111 11 11</a>
           </li>
@@ -68,49 +70,49 @@
       </section>
 
       <!-- Features section -->
-      <section class="section">
-        <div class="container features">
-          <ul class="section-list">
-            <li class="list">
-              <div class="section-list-features">
+     <section class="section">
+        <div class="container features-box">
+          <ul class="services-list">
+            <li class="scroll">
+              <div class="features-group">
                 <a class="features-link" href=""><svg class="icon-antenna" width="70" height="70">
                     <use href="./images/symbol-defs.svg#icon-antenna"></use></svg></a>
               </div>
-                <h3 class="title">Внимание к деталям</h3>
-                <p class="text">
+                <h3 class="features-title">ВНИМАНИЕ К ДЕТАЛЯМ</h3>
+                <p class="features-text">
                   Идейные соображения, а также начало повседневной работы по
                   формированию позиции.
                 </p>
             </li>
-            <li class="list">
-              <div class="section-list-features">
+            <li class="scroll">
+              <div class="features-group">
                 <a class="features-link" href=""><svg class="icon-clock" width="70" height="70">
                   <use href="./images/symbol-defs.svg#icon-clock"></use></svg></a>
               </div>
-                <h3 class="title">Пунктуальность</h3>
-                <p class="text">
+                <h3 class="features-title">ПУНКТУАЛЬНОСТЬ</h3>
+                <p class="features-text">
                   Задача организации, в особенности же рамки и место обучения
                   кадров влечет за собой.
                 </p>            
             </li>
-            <li class="list">
-              <div class="section-list-features">
+            <li class="scroll">
+              <div class="features-group">
                 <a class="features-link" href=""><svg class="icon-diagram" width="70" height="70">
                     <use href="./images/symbol-defs.svg#icon-diagram"></use></svg></a>
               </div>
-                <h3 class="title">Планирование</h3>
-                <p class="text">
+                <h3 class="features-title">ПЛАНИРОВАНИЕ</h3>
+                <p class="features-text">
                   Равным образом консультация с широким активом в значительной
                   степени обуславливает.
                 </p>
             </li>
-            <li class="list">
-              <div class="section-list-features">
+            <li class="scroll">
+              <div class="features-group">
                 <a class="features-link" href=""><svg class="icon-astronaut" width="70" height="70">
                   <use href="./images/symbol-defs.svg#icon-astronaut"></use></svg></a>
               </div>
-                <h3 class="title">Современные технологии</h3>
-                <p class="text">Значимость этих проблем настолько очевидна, что реализация
+                <h3 class="features-title">СОВРЕМЕННЫЕ ТЕХНОЛОГИИ</h3>
+                <p class="features-text">Значимость этих проблем настолько очевидна, что реализация
                 плановых заданий.
                 </p>
             </li>
@@ -157,8 +159,8 @@
         <div class="container team">
           <h2 class="title">Наша команда</h2>
 
-          <ul class="team-list">
-            <li class="group">
+          <ul class="list">
+            <li class="item">
               <img
                 class="image"
                 width="270"
@@ -166,8 +168,8 @@
                 alt="team"
               />
               <div class="team-info">
-                <h3 class="team-name">Игорь Демьяненко</h3>
-                <p class="team-profession">Product Designe</p>
+                <h3 class="name">Игорь Демьяненко</h3>
+                <p class="profession">Product Designe</p>
                 <ul class="team-social-list">
                   <li class="team-social-item">
                     <a class="team-social-link" href="">
@@ -206,7 +208,7 @@
                 </ul>
               </div>
             </li>
-            <li class="group">
+            <li class="item">
               <img
                 class="image"
                 width="270"
@@ -214,8 +216,8 @@
                 alt="team"
               />
               <div class="team-info">
-                <h3 class="team-name">Ольга Репина</h3>
-                <p class="team-profession">Frontend Developer</p>
+                <h3 class="name">Ольга Репина</h3>
+                <p class="profession">Frontend Developer</p>
                 <ul class="team-social-list">
                   <li class="team-social-item">
                     <a class="team-social-link" href="">
@@ -254,7 +256,7 @@
                 </ul>
               </div>
             </li>
-            <li class="group">
+            <li class="item">
               <img
                 class="image"
                 width="270"
@@ -262,8 +264,8 @@
                 alt="team"
               />
               <div class="team-info">
-                <h3 class="team-name">Николай Тарасов</h3>
-                <p class="team-profession">Marketing</p>
+                <h3 class="name">Николай Тарасов</h3>
+                <p class="profession">Marketing</p>
                 <ul class="team-social-list">
                   <li class="team-social-item">
                     <a class="team-social-link" href="">
@@ -302,7 +304,7 @@
                 </ul>
               </div>
             </li>
-            <li class="group">
+            <li class="item">
               <img
                 class="image"
                 width="270"
@@ -310,8 +312,8 @@
                 alt="team"
               />
               <div class="team-info">
-                <h3 class="team-name">Михаил Ермаков</h3>
-                <p class="team-profession">UI Designer</p>
+                <h3 class="name">Михаил Ермаков</h3>
+                <p class="profession">UI Designer</p>
                 <ul class="team-social-list">
                   <li class="team-social-item">
                     <a class="team-social-link" href="">
@@ -360,7 +362,7 @@
       <div class="container company">
         <h2 class="title-company">Постоянные клиенты</h2>
 
-        <ul class="company-social-list">
+        <ul class="company-social-links">
           <li class="company-social-item">
             <a class="company-social-link" href="">
               <svg class="company-social-icon" width="106" height="60">

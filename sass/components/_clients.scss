@@ -1,20 +1,15 @@
-/* Clients */
+/* Company section */
 
 .company .section {
   margin-bottom: 94px;
 }
+
 .company .container {
   display: block;
   justify-content: center;
   align-items: center;
 }
-.container {
-  width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
-}
+
 .title-company {
   margin: 0;
   margin-bottom: 50px;
@@ -25,56 +20,47 @@
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
 }
-.company-social-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
+
+.company-social-links {
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
 }
+
 .company-social-item {
   margin-right: 30px;
   width: 170px;
   height: 92px;
+
+  &:last-child {
+    margin-right: 0;
+  }
 }
-.company-social-item:last-child {
-  margin-right: 0;
-}
+
 .company-social-link {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  border: 1px solid var(--fill-color);
+  align-items: center;
+  border: 1px solid #afb1b8;
   border-radius: 4px;
   width: 100%;
   height: 100%;
-  -webkit-transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    border-color: var(--accent-color);
+    fill: var(--accent-color);
+  }
 }
 
 .company-social-icon {
-  fill: var(--fill-color);
-  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  fill: #afb1b8;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.company-social-link:hover,
-.company-social-link:focus {
-  border-color: var(--accent-color);
-}
-.company-social-link:hover,
-.company-social-link:focus {
-  fill: var(--accent-color);
-}
+
 .company-social-link:hover .company-social-icon,
 .company-social-link:focus .company-social-icon {
   fill: var(--accent-color);
