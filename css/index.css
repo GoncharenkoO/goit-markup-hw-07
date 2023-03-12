@@ -1,0 +1,167 @@
+/****************** Page Hero *******************/
+.hero {
+	max-width: 1440px;
+	min-height: 600px;
+	padding: 188px 0;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: var(--primary-color-text);
+	background-image: linear-gradient(to right, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+		url(../images/hero/hero-fon.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+.hero-title {
+	max-width: 585px;
+	margin: 0 auto 48px;
+
+	font-weight: 700;
+	font-size: 56px;
+	line-height: 1.07; /* 60/56 */
+	letter-spacing: 0.02em;
+	color: var(--main-white-color);
+}
+
+/****************** Page Advantages *******************/
+.advantages-list {
+	display: flex;
+	align-items: center;
+}
+.advantages-item {
+	max-width: 264px;
+	margin-right: var(--card-gap);
+}
+.advantages-item:last-child {
+	margin-right: 0;
+}
+.advantages-item::before {
+	display: block;
+	content: "";
+	padding: 24px 100px;
+	margin-bottom: 8px;
+	height: 112px;
+	background-repeat: no-repeat;
+	background-size: 64px 64px;
+	background-position: center center;
+	background-color: var(--text-cloud-color);
+	border-radius: var(--radius);
+}
+.icon-antenna::before {
+	background-image: url(../images/advantages/antenna.svg);
+}
+.icon-clock::before {
+	background-image: url(../images/advantages/clock.svg);
+}
+.icon-diagram::before {
+	background-image: url(../images/advantages/diagram.svg);
+}
+.icon-astronaut::before {
+	background-image: url(../images/advantages/astronaut.svg);
+}
+.advantages-list .title {
+	margin-bottom: 8px;
+}
+.advantages-list .title,
+.team-info .title {
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 1.2; /* 24/20 */
+	letter-spacing: 0.02em;
+}
+.advantages-list .text,
+.team-info .text {
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 1.5; /* 24/16 */
+	letter-spacing: 0.02em;
+	color: var(--secondary-color-text);
+}
+
+/****************** Page Technologies *******************/
+.section.technologies {
+	padding-top: 0;
+}
+.technologies-list {
+	display: flex;
+}
+.technologies-item:not(:last-child),
+.team-item:not(:last-child) {
+	margin-right: var(--card-gap);
+}
+
+/****************** Page Team *******************/
+.team {
+	background-color: var(--text-cloud-color);
+}
+.team-list {
+	display: flex;
+	align-items: center;
+}
+.team-item {
+	border-radius: var(--team-radius);
+	background-color: var(--main-white-color);
+	box-shadow: var(--team-shadow);
+}
+.team-info {
+	padding: 32px 16px;
+}
+.team-info .title,
+.team-info .text {
+	margin-bottom: 8px;
+}
+.team-social-list {
+	display: flex;
+}
+.team-social-item:not(:last-child) {
+	margin-right: 24px;
+}
+.team-social-link {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background-color: var(--iris-color);
+
+	transition: background-color var(--time-function);
+}
+.team-social-link:hover,
+.team-social-link:focus {
+	background-color: var(--ocean-color);
+}
+
+/****************** Page Customers *******************/
+.section.customers {
+	padding-bottom: 132px;
+}
+.customers-list {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.customers-item:not(:last-child) {
+	margin-right: 24px;
+}
+.customers-link {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 168px;
+	height: 88px;
+	border: 1px solid currentColor;
+	border-radius: var(--radius);
+	color: var(--slate-color);
+
+  transition: color var(--time-function);
+}
+.customers-link:hover,
+.customers-link:focus {
+	color: var(--ocean-color);
+}
+.customers-icon {
+	width: 104px;
+	height: 56px;
+	fill: currentColor;
+}
