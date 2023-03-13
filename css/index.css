@@ -129,7 +129,22 @@
 }
 .team-social-link:hover,
 .team-social-link:focus {
+	animation: shake 2s linear;
 	background-color: var(--ocean-color);
+}
+@keyframes shake {
+  0%, 50%, 100% {
+    transform: rotate(0deg);
+  }
+
+  10%, 30% {
+    transform: rotate(-10deg);
+  }
+
+  20%, 40% {
+    transform: rotate(10deg);
+  }
+
 }
 
 /****************** Page Customers *******************/
@@ -154,7 +169,7 @@
 	border-radius: var(--radius);
 	color: var(--slate-color);
 
-  transition: color var(--time-function);
+	transition: color var(--time-function);
 }
 .customers-link:hover,
 .customers-link:focus {

@@ -278,8 +278,30 @@ button {
 }
 .social-link:hover,
 .social-link:focus {
+	animation: pulse 2s;
 	background-color: var(--green-color);
 }
+
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  50% {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .footer-form {
 	display: flex;
 }
@@ -295,6 +317,11 @@ button {
 	color: var(--footer-text);
 	border: var(--footer-input);
 	background-color: transparent;
+	transition: border-color var(--time-function);
+}
+.footer-mail:focus {
+	outline: none;
+	border-color: var(--iris-color);
 }
 .footer-mail::placeholder {
 	font-weight: 400;
