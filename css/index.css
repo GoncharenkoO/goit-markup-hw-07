@@ -1,24 +1,32 @@
 /****************** Page Hero *******************/
 .hero {
-	max-width: 1440px;
-	min-height: 600px;
-	padding: 188px 0;
+	padding: 112px 0;
 	margin-right: auto;
 	margin-left: auto;
 	background-color: var(--primary-color-text);
 	background-image: linear-gradient(to right, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-		url(../images/hero/hero-fon.jpg);
+		url(../images/hero/hero-sm.jpg);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
 }
+@media screen and (min-device-pixel-ratio: 2),
+	screen and (-moz-min-device-pixel-ratio: 2),
+	screen and (-webkit-min-device-pixel-ratio: 2),
+	screen and (min-resolution: 192dpi),
+	screen and (min-resolution: 2dppx) {
+	.hero {
+		background-image: linear-gradient(to right, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+			url(../images/hero/hero-sm@2x.jpg);
+	}
+}
 .hero-title {
-	max-width: 585px;
-	margin: 0 auto 48px;
+	max-width: 320px;
+	margin: 0 auto var(--mobile-gap);
 
 	font-weight: 700;
-	font-size: 56px;
-	line-height: 1.07; /* 60/56 */
+	font-size: 36px;
+	line-height: 1.11; /* 40/36 */
 	letter-spacing: 0.02em;
 	color: var(--main-white-color);
 }
@@ -26,52 +34,24 @@
 /****************** Page Advantages *******************/
 .advantages-list {
 	display: flex;
-	align-items: center;
+	flex-direction: column;
+	flex-wrap: wrap;
+	gap: var(--mobile-gap);
 }
 .advantages-item {
-	max-width: 264px;
-	margin-right: var(--card-gap);
+	flex-basis: calc((100% - 216px) / 4);
 }
-.advantages-item:last-child {
-	margin-right: 0;
-}
-.advantages-item::before {
-	display: block;
-	content: "";
-	padding: 24px 100px;
+.advantages-title {
 	margin-bottom: 8px;
-	height: 112px;
-	background-repeat: no-repeat;
-	background-size: 64px 64px;
-	background-position: center center;
-	background-color: var(--text-cloud-color);
-	border-radius: var(--radius);
-}
-.icon-antenna::before {
-	background-image: url(../images/advantages/antenna.svg);
-}
-.icon-clock::before {
-	background-image: url(../images/advantages/clock.svg);
-}
-.icon-diagram::before {
-	background-image: url(../images/advantages/diagram.svg);
-}
-.icon-astronaut::before {
-	background-image: url(../images/advantages/astronaut.svg);
-}
-.advantages-list .title {
-	margin-bottom: 8px;
-}
-.advantages-list .title,
-.team-info .title {
-	font-weight: 500;
-	font-size: 20px;
-	line-height: 1.2; /* 24/20 */
+	font-weight: 700;
+	font-size: 36px;
+	line-height: 1.11; /* 40/36 */
+	text-align: center;
 	letter-spacing: 0.02em;
+	color: var(--primary-color-text);
 }
-.advantages-list .text,
-.team-info .text {
-	font-weight: 400;
+.advantages-text {
+	font-weight: 500;
 	font-size: 16px;
 	line-height: 1.5; /* 24/16 */
 	letter-spacing: 0.02em;
@@ -79,24 +59,17 @@
 }
 
 /****************** Page Technologies *******************/
-.section.technologies {
+.technologies {
+	display: none;
 	padding-top: 0;
-}
-.technologies-list {
-	display: flex;
-}
-.technologies-item:not(:last-child),
-.team-item:not(:last-child) {
-	margin-right: var(--card-gap);
 }
 
 /****************** Page Team *******************/
 .team {
 	background-color: var(--text-cloud-color);
 }
-.team-list {
-	display: flex;
-	align-items: center;
+.team-item:not(:last-child) {
+	margin-bottom: var(--mobile-gap);
 }
 .team-item {
 	border-radius: var(--team-radius);
@@ -104,18 +77,35 @@
 	box-shadow: var(--team-shadow);
 }
 .team-info {
-	padding: 32px 16px;
+	padding: 32px 14px;
 }
-.team-info .title,
-.team-info .text {
+.team-title {
 	margin-bottom: 8px;
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 1.2; /* 24/20 */
+	letter-spacing: 0.02em;
+	color: var(--primary-color-text);
+}
+.team-text {
+	margin-bottom: 8px;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 1.5; /* 24/16 */
+	letter-spacing: 0.02em;
+	color: var(--secondary-color-text);
 }
 .team-social-list {
 	display: flex;
+	flex-wrap: wrap;
+	gap: var(--card-gap);
 }
-.team-social-item:not(:last-child) {
+.team-social-item {
+	flex-basis: calc((100% - var(--mobile-gap)) / 4);
+}
+/* .team-social-item:not(:last-child) {
 	margin-right: 24px;
-}
+} */
 .team-social-link {
 	display: flex;
 	justify-content: center;
@@ -133,37 +123,48 @@
 	background-color: var(--ocean-color);
 }
 @keyframes shake {
-  0%, 50%, 100% {
-    transform: rotate(0deg);
-  }
+	0%,
+	50%,
+	100% {
+		transform: rotate(0deg);
+	}
 
-  10%, 30% {
-    transform: rotate(-10deg);
-  }
+	10%,
+	30% {
+		transform: rotate(-10deg);
+	}
 
-  20%, 40% {
-    transform: rotate(10deg);
-  }
-
+	20%,
+	40% {
+		transform: rotate(10deg);
+	}
 }
 
 /****************** Page Customers *******************/
-.section.customers {
-	padding-bottom: 132px;
-}
-.customers-list {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-.customers-item:not(:last-child) {
+/* .customers-item:not(:last-child) {
 	margin-right: 24px;
+} */
+.customers-list {
+	/* display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+	grid-gap: 72px 16px; */
+	/* display: flex;
+  flex-wrap: wrap; */
+	/* justify-content: center;
+	align-items: center; */
+	/* gap: 16px; */
 }
+/* .customers-item:not(:nth-child(2n)) {
+	margin-right: 16px;
+}
+.customers-item:not(:nth-last-child(-n + 2)) {
+	margin-bottom: var(--mobile-gap);
+} */
 .customers-link {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 168px;
+	width: 198px;
 	height: 88px;
 	border: 1px solid currentColor;
 	border-radius: var(--radius);

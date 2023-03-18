@@ -1,0 +1,77 @@
+@media screen and (min-width: 768px) {
+	.hero {
+		background-image: linear-gradient(to right, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+			url(../../images/hero/hero-md.jpg);
+	}
+	@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2),
+		screen and (min-width: 768px) and (-moz-min-device-pixel-ratio: 2),
+		screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2),
+		screen and (min-width: 768px) and (min-resolution: 192dpi),
+		screen and (min-width: 768px) and (min-resolution: 2dppx) {
+		.hero {
+			background-image: linear-gradient(to right, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+				url(../../images/hero/hero-md@2x.jpg);
+		}
+	}
+	.hero-title {
+		max-width: 496px;
+		margin: 0 auto 40px;
+		font-size: 56px;
+		line-height: 1.07; /* 60/56 */
+	}
+}
+@media screen and (min-width: 768px) {
+	.advantages-list {
+		flex-direction: row;
+		align-items: center;
+		gap: var(--mobile-gap) var(--card-gap);
+	}
+
+	.advantages-item {
+		flex-basis: calc((100% - 24px) / 2);
+	}
+
+	.advantages-title {
+		text-align: left;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.team-info {
+		padding: 32px 16px;
+	}
+	.team-social-list {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+	.team-title {
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 1.2; /* 24/20 */
+		letter-spacing: 0.02em;
+	}
+  	.team-text {
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 1.5; /* 24/16 */
+		letter-spacing: 0.02em;
+		color: var(--secondary-color-text);
+	}
+}
+@media screen and (min-width: 768px) {
+	.customers {
+		padding-bottom: 132px;
+	}
+	.customers-list {
+		/* display: flex;
+		justify-content: center;
+		align-items: center; */
+	}
+	.customers-item:not(:last-child) {
+		margin-right: 24px;
+	}
+	.customers-link {
+		width: 168px;
+	}
+}
