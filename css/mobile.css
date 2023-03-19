@@ -1,0 +1,113 @@
+.mobile-menu {
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	max-height: 796px;
+	z-index: 1000;
+	top: 0;
+	left: 0;
+	background-color: var(--main-white-color);
+	box-shadow: var(--mobile-shadow);
+
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+	transform: translateX(-100%);
+	transition: transform var(--time-function), opacity var(--time-function),
+		visibility var(--time-function);
+}
+
+.mobile-menu.is-open {
+	opacity: 1;
+	visibility: visible;
+	pointer-events: auto;
+	transform: translateX(0);
+}
+.mobile-container {
+	position: relative;
+	padding-top: 80px;
+	padding-bottom: 40px;
+	padding-left: 40px;
+}
+.mobile-close {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	right: 20px;
+	top: 20px;
+	background-color: transparent;
+	width: 32px;
+	height: 32px;
+	transform: rotate(0deg);
+	transition: color var(--time-function), transform var(--time-function);
+}
+.mobile-close:hover,
+.mobile-close:focus {
+	fill: var(--ocean-color);
+	transform: rotate(360deg);
+}
+.list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+/* .wrapper:not(:last-child) {
+  margin-bottom: 150px;
+} */
+.mobile-item:not(:last-child) {
+	margin-bottom: 40px;
+}
+.mobile-link {
+	font-weight: 700;
+	font-size: 36px;
+	line-height: 1.11; /* 40/36 */
+	letter-spacing: 0.02em;
+
+	color: var(--primary-color-text);
+	transition: color var(--time-function);
+}
+.mobile-link:hover,
+.mobile-link:focus {
+	color: var(--ocean-color);
+}
+.mobile-contacts {
+	margin-bottom: 48px;
+}
+.mobile-phone {
+	font-weight: 700;
+	font-size: 36px;
+	line-height: 1.11; /* 40/36 */
+	letter-spacing: 0.02em;
+	color: var(--iris-color);
+	transition: color var(--time-function);
+}
+.mobile-phone:hover,
+.mobile-phone:focus {
+	color: var(--ocean-color);
+}
+@media screen and (max-width: 407.98px) {
+	.mobile-phone {
+		font-size: 34px;
+	}
+}
+.mobile-email {
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 1.2; /* 24/20 */
+	letter-spacing: 0.02em;
+	color: inherit;
+	transition: color var(--time-function);
+}
+.mobile-email:hover,
+.mobile-email:focus {
+	color: var(--ocean-color);
+}
+.mobile-social-list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 56px;
+}
+.mobile-social-item {
+	flex-basis: calc((100% - 168px) / 4);
+}

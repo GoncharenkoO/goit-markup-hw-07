@@ -1,61 +1,61 @@
 @media screen and (min-width: 768px) {
-.nav-list {
-	display: flex;
-	margin-left: 76px;
-}
-.nav-item:not(:last-child) {
-	margin-right: 40px;
-}
-.nav-list .link {
-	display: block;
-	padding: var(--card-gap) 0;
-	font-weight: 500;
-	font-size: 16px;
-	line-height: 1.5; /* 24/16 */
-	letter-spacing: 0.02em;
-	color: var(--primary-color-text);
+	.nav-list {
+		display: flex;
+		margin-left: 76px;
+	}
+	.nav-item:not(:last-child) {
+		margin-right: 40px;
+	}
+	.nav-list .link {
+		display: block;
+		padding: var(--card-gap) 0;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 1.5; /* 24/16 */
+		letter-spacing: 0.02em;
+		color: var(--primary-color-text);
 
-	transition: color var(--time-function);
-}
-.nav-list .link:hover,
-.nav-list .link:focus {
-	color: var(--ocean-color);
-}
-.nav-list .link.current {
-	position: relative;
+		transition: color var(--time-function);
+	}
+	.nav-list .link:hover,
+	.nav-list .link:focus {
+		color: var(--ocean-color);
+	}
+	.nav-list .link.current {
+		position: relative;
 
-	color: var(--ocean-color);
-}
-.link.current::after {
-	position: absolute;
-	display: block;
-	left: 0;
-	bottom: -1px;
-	content: "";
-	width: 100%;
-	height: 4px;
-	border-radius: 2px;
-	background-color: var(--ocean-color);
-}
-.contacts-list {
-	display: flex;
-}
-.contacts-item:not(:last-child) {
-	margin-right: 40px;
-}
-.contacts-list .link {
-	font-weight: 400;
-	font-size: 16px;
-	line-height: 1.5; /* 24/16 */
-	letter-spacing: 0.02em;
-	color: var(--secondary-color-text);
+		color: var(--ocean-color);
+	}
+	.link.current::after {
+		position: absolute;
+		display: block;
+		left: 0;
+		bottom: -1px;
+		content: "";
+		width: 100%;
+		height: 4px;
+		border-radius: 2px;
+		background-color: var(--ocean-color);
+	}
+	.contacts-list {
+		display: flex;
+	}
+	.contacts-item:not(:last-child) {
+		margin-right: 40px;
+	}
+	.contacts-list .link {
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 1.5; /* 24/16 */
+		letter-spacing: 0.02em;
+		color: var(--secondary-color-text);
 
-	transition: color var(--time-function);
-}
-.contacts-list .link:hover,
-.contacts-list .link:focus {
-	color: var(--ocean-color);
-}
+		transition: color var(--time-function);
+	}
+	.contacts-list .link:hover,
+	.contacts-list .link:focus {
+		color: var(--ocean-color);
+	}
 }
 @media screen and (min-width: 768px) {
 	.hero {
@@ -135,6 +135,9 @@
 	}
 }
 @media screen and (min-width: 768px) {
+	.footer-text {
+		max-width: 264px;
+	}
 	.footer-info-list {
 		margin-right: 120px;
 	}
