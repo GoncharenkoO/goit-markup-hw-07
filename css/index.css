@@ -68,6 +68,12 @@
 .team {
 	background-color: var(--text-cloud-color);
 }
+.team-list {
+	text-align: center;
+}
+.team-item {
+	display: inline-block;
+}
 .team-item:not(:last-child) {
 	margin-bottom: var(--mobile-gap);
 }
@@ -98,14 +104,11 @@
 .team-social-list {
 	display: flex;
 	flex-wrap: wrap;
-	gap: var(--card-gap);
+  justify-content: center;
 }
-.team-social-item {
-	flex-basis: calc((100% - var(--mobile-gap)) / 4);
-}
-/* .team-social-item:not(:last-child) {
+.team-social-item:not(:last-child) {
 	margin-right: 24px;
-} */
+}
 .team-social-link {
 	display: flex;
 	justify-content: center;
@@ -141,25 +144,24 @@
 }
 
 /****************** Page Customers *******************/
-/* .customers-item:not(:last-child) {
-	margin-right: 24px;
-} */
 .customers-list {
-	/* display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-	grid-gap: 72px 16px; */
-	/* display: flex;
-  flex-wrap: wrap; */
-	/* justify-content: center;
-	align-items: center; */
-	/* gap: 16px; */
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 }
-/* .customers-item:not(:nth-child(2n)) {
-	margin-right: 16px;
-}
-.customers-item:not(:nth-last-child(-n + 2)) {
+.customers-item:not(:last-child) {
 	margin-bottom: var(--mobile-gap);
-} */
+}
+@media screen and (min-width: 442px) {
+	.customers-item:not(:nth-child(2n)) {
+		margin-right: 16px;
+	}
+}
+  @media screen and (min-width:426px) and (max-width: 767.98px) {
+    .customers-item:nth-last-child(-n + 2){
+      margin-bottom: 0;
+    }
+  }
 .customers-link {
 	display: flex;
 	justify-content: center;

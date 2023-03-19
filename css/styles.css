@@ -25,7 +25,7 @@
 		0px 2px 1px rgba(0, 0, 0, 0.2);
 	--modal-backdrop: rgba(46, 47, 66, 0.4);
 	--card-gap: 24px;
-  --mobile-gap: 72px;
+	--mobile-gap: 72px;
 	--border-value: 1px solid #e7e9fc;
 	--footer-input: 1px solid rgba(255, 255, 255, 0.3);
 	--radius: 4px;
@@ -176,62 +176,9 @@ button {
 .logo .sign {
 	color: var(--primary-color-text);
 }
-.nav-list {
-	display: flex;
-	margin-left: 76px;
-}
-.nav-item:not(:last-child) {
-	margin-right: 40px;
-}
-.nav-list .link {
-	display: block;
-	padding: var(--card-gap) 0;
-	font-weight: 500;
-	font-size: 16px;
-	line-height: 1.5; /* 24/16 */
-	letter-spacing: 0.02em;
-	color: var(--primary-color-text);
-
-	transition: color var(--time-function);
-}
-.nav-list .link:hover,
-.nav-list .link:focus {
-	color: var(--ocean-color);
-}
-.nav-list .link.current {
-	position: relative;
-
-	color: var(--ocean-color);
-}
-.link.current::after {
-	position: absolute;
-	display: block;
-	left: 0;
-	bottom: -1px;
-	content: "";
-	width: 100%;
-	height: 4px;
-	border-radius: 2px;
-	background-color: var(--ocean-color);
-}
+.nav-list,
 .contacts-list {
-	display: flex;
-}
-.contacts-item:not(:last-child) {
-	margin-right: 40px;
-}
-.contacts-list .link {
-	font-weight: 400;
-	font-size: 16px;
-	line-height: 1.5; /* 24/16 */
-	letter-spacing: 0.02em;
-	color: var(--secondary-color-text);
-
-	transition: color var(--time-function);
-}
-.contacts-list .link:hover,
-.contacts-list .link:focus {
-	color: var(--ocean-color);
+	display: none;
 }
 
 /****************** Page Footer *******************/
@@ -242,11 +189,14 @@ button {
 }
 .footer-container {
 	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 .footer-info-list {
-	margin-right: 120px;
+	margin-bottom: var(--mobile-gap);
 }
 .footer-logo {
+	display: block;
 	font-family: var(--secondary-font);
 	font-weight: 800;
 	font-size: 18px;
@@ -254,6 +204,7 @@ button {
 	letter-spacing: 0.03em;
 	text-transform: uppercase;
 	color: var(--iris-color);
+	text-align: center;
 }
 .footer-logo .sign {
 	color: var(--text-cloud-color);
@@ -269,7 +220,8 @@ button {
 	color: var(--text-cornflower-color);
 }
 .footer-social-list {
-	margin-right: 80px;
+	text-align: center;
+	margin-bottom: var(--mobile-gap);
 }
 .footer-desc {
 	margin-bottom: 16px;
@@ -278,6 +230,7 @@ button {
 	line-height: 1.5; /* 24/16 */
 	letter-spacing: 0.02em;
 	color: var(--main-white-color);
+	text-align: center;
 }
 .social-list {
 	display: flex;
@@ -328,12 +281,14 @@ button {
 
 .footer-form {
 	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 .footer-label {
-	margin-right: 24px;
+	margin-bottom: 16px;
 }
 .footer-mail {
-	width: 264px;
+	width: 292px;
 	height: 40px;
 	padding: 8px 16px;
 	border-radius: var(--radius);
