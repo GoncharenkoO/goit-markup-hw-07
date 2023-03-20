@@ -17,6 +17,9 @@
 		/>
 		<link rel="stylesheet" href="./css/styles.css" />
 		<link rel="stylesheet" href="./css/portfolio.css" />
+		<link rel="stylesheet" href="./css/mobile.css" />
+		<link rel="stylesheet" href="./css/portfolio/tablet.css" />
+		<link rel="stylesheet" href="./css/portfolio/desktop.css" />
 	</head>
 	<body>
 		<header class="page-header">
@@ -25,17 +28,27 @@
 					<a class="logo decor" href="./index.html">Web<span class="sign">Studio</span></a>
 					<ul class="nav-list">
 						<li class="nav-item">
-							<a href="./index.html" class="link decor">Studio</a>
+							<a href="./index.html" class="link decor current">Studio</a>
 						</li>
 						<li class="nav-item">
-							<a href="./portfolio.html" class="link decor current">Portfolio</a>
+							<a href="./portfolio.html" class="link decor">Portfolio</a>
 						</li>
 						<li class="nav-item">
 							<a href="" class="link decor">Contacts</a>
 						</li>
 					</ul>
 				</nav>
-				<address>
+				<button
+					class="header-mobile-menu js-open-menu"
+					aria-expanded="false"
+					aria-controls="mobile-menu"
+					type="button"
+				>
+					<svg class="mobile-menu-icon" width="32" height="22">
+						<use href="./images/symbol-defs.svg#icon-menu"></use>
+					</svg>
+				</button>
+				<address class="header-address">
 					<ul class="contacts-list">
 						<li class="contacts-item">
 							<a href="mailto:info@devstudio.com" class="link decor">info@devstudio.com</a>
@@ -45,6 +58,66 @@
 						</li>
 					</ul>
 				</address>
+			</div>
+			<div class="mobile-menu js-menu-container">
+				<button class="mobile-close js-close-menu">
+					<svg class="mobile-close-icon" width="40" height="40">
+						<use href="./images/symbol-defs.svg#icon-close"></use>
+					</svg>
+				</button>
+				<div class="wrapper">
+					<ul class="mobile-list list">
+						<li class="mobile-item">
+							<a href="./index.html" class="mobile-link decor">Studio</a>
+						</li>
+						<li class="mobile-item">
+							<a href="./portfolio.html" class="mobile-link decor">Portfolio</a>
+						</li>
+						<li class="mobile-item">
+							<a href="" class="mobile-link decor">Contacts</a>
+						</li>
+					</ul>
+				</div>
+				<div class="wrapper">
+					<ul class="mobile-contacts list">
+						<li class="mobile-item tel">
+							<a href="tel:+110001111111" class="mobile-phone decor">+11 (000) 111-11-11</a>
+						</li>
+						<li class="mobile-item mail">
+							<a href="mailto:info@devstudio.com" class="mobile-email decor">info@devstudio.com</a>
+						</li>
+					</ul>
+					<ul class="mobile-social-list list">
+						<li class="mobile-social-list">
+							<a href="" class="team-social-link decor">
+								<svg class="team-social-icon" width="16" height="16">
+									<use href="./images/symbol-defs.svg#icon-instagram"></use>
+								</svg>
+							</a>
+						</li>
+						<li class="mobile-social-list">
+							<a href="" class="team-social-link decor">
+								<svg class="team-social-icon" width="16" height="16">
+									<use href="./images/symbol-defs.svg#icon-twitter"></use>
+								</svg>
+							</a>
+						</li>
+						<li class="mobile-social-list">
+							<a href="" class="team-social-link decor">
+								<svg class="team-social-icon" width="16" height="16">
+									<use href="./images/symbol-defs.svg#icon-facebook"></use>
+								</svg>
+							</a>
+						</li>
+						<li class="mobile-social-list">
+							<a href="" class="team-social-link decor">
+								<svg class="team-social-icon" width="16" height="16">
+									<use href="./images/symbol-defs.svg#icon-linkedin"></use>
+								</svg>
+							</a>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</header>
 		<main>
@@ -73,7 +146,32 @@
 						<li class="projects-item">
 							<a href="#" class="projects-link decor">
 								<div class="projects-thumb">
-									<img src="./images/project/project1.jpg" alt="Project" width="360" />
+									<picture>
+										<source
+											media="(min-width: 1200px)"
+											srcset="
+												./images/project/banking-lg.jpg    1x,
+												./images/project/banking-lg@2x.jpg 2x
+											"
+											type="image/jpeg"
+										/>
+										<source
+											media="(min-width: 768px)"
+											srcset="
+												./images/project/banking-md.jpg    1x,
+												./images/project/banking-md@2x.jpg 2x
+											"
+											type="image/jpeg"
+										/>
+										<img
+											srcset="
+												./images/project/banking-sm.jpg    1x,
+												./images/project/banking-sm@2x.jpg 2x
+											"
+											src="./images/project/banking-sm.jpg"
+											alt="Banking App Interface Concept"
+										/>
+									</picture>
 									<div class="projects-overlay">
 										<div class="projects-actions">
 											<p class="projects-desc"
@@ -92,7 +190,32 @@
 						<li class="projects-item">
 							<a href="#" class="projects-link decor">
 								<div class="projects-thumb">
-									<img src="./images/project/project2.jpg" alt="Project" width="360" />
+									<picture>
+										<source
+											media="(min-width: 1200px)"
+											srcset="
+												./images/project/cashless-lg.jpg    1x,
+												./images/project/cashless-lg@2x.jpg 2x
+											"
+											type="image/jpeg"
+										/>
+										<source
+											media="(min-width: 768px)"
+											srcset="
+												./images/project/cashless-md.jpg    1x,
+												./images/project/cashless-md@2x.jpg 2x
+											"
+											type="image/jpeg"
+										/>
+										<img
+											srcset="
+												./images/project/cashless-sm.jpg    1x,
+												./images/project/cashless-sm@2x.jpg 2x
+											"
+											src="./images/project/cashless-sm.jpg"
+											alt="Cashless Payment"
+										/>
+									</picture>
 									<div class="projects-overlay">
 										<div class="projects-actions">
 											<p class="projects-desc"
@@ -111,7 +234,32 @@
 						<li class="projects-item">
 							<a href="#" class="projects-link decor">
 								<div class="projects-thumb">
-									<img src="./images/project/project3.jpg" alt="Project" width="360" />
+									<picture>
+										<source
+											media="(min-width: 1200px)"
+											srcset="
+												./images/project/meditation-lg.jpg    1x,
+												./images/project/meditation-lg@2x.jpg 2x
+											"
+											type="image/jpeg"
+										/>
+										<source
+											media="(min-width: 768px)"
+											srcset="
+												./images/project/meditation-md.jpg    1x,
+												./images/project/meditation-md@2x.jpg 2x
+											"
+											type="image/jpeg"
+										/>
+										<img
+											srcset="
+												./images/project/meditation-sm.jpg    1x,
+												./images/project/meditation-sm@2x.jpg 2x
+											"
+											src="./images/project/meditation-sm.jpg"
+											alt="Meditation App"
+										/>
+									</picture>
 									<div class="projects-overlay">
 										<div class="projects-actions">
 											<p class="projects-desc"
@@ -130,7 +278,23 @@
 						<li class="projects-item">
 							<a href="#" class="projects-link decor">
 								<div class="projects-thumb">
-									<img src="./images/project/project4.jpg" alt="Project" width="360" />
+									<picture>
+										<source
+											media="(min-width: 1200px)"
+											srcset="./images/project/taxi-lg.jpg 1x, ./images/project/taxi-lg@2x.jpg 2x"
+											type="image/jpeg"
+										/>
+										<source
+											media="(min-width: 768px)"
+											srcset="./images/project/taxi-md.jpg 1x, ./images/project/taxi-md@2x.jpg 2x"
+											type="image/jpeg"
+										/>
+										<img
+											srcset="./images/project/taxi-sm.jpg 1x, ./images/project/taxi-sm@2x.jpg 2x"
+											src="./images/project/taxi-sm.jpg"
+											alt="Taxi Service"
+										/>
+									</picture>
 									<div class="projects-overlay">
 										<div class="projects-actions">
 											<p class="projects-desc"
@@ -149,7 +313,32 @@
 						<li class="projects-item">
 							<a href="#" class="projects-link decor">
 								<div class="projects-thumb">
-									<img src="./images/project/project5.jpg" alt="Project" width="360" />
+									<picture>
+										<source
+											media="(min-width: 1200px)"
+											srcset="
+												./images/project/screen-lg.jpg    1x,
+												./images/project/screen-lg@2x.jpg 2x
+											"
+											type="image/jpeg"
+										/>
+										<source
+											media="(min-width: 768px)"
+											srcset="
+												./images/project/screen-md.jpg    1x,
+												./images/project/screen-md@2x.jpg 2x
+											"
+											type="image/jpeg"
+										/>
+										<img
+											srcset="
+												./images/project/screen-sm.jpg    1x,
+												./images/project/screen-sm@2x.jpg 2x
+											"
+											src="./images/project/screen-sm.jpg"
+											alt="Screen Illustrations"
+										/>
+									</picture>
 									<div class="projects-overlay">
 										<div class="projects-actions">
 											<p class="projects-desc"
@@ -168,7 +357,32 @@
 						<li class="projects-item">
 							<a href="#" class="projects-link decor">
 								<div class="projects-thumb">
-									<img src="./images/project/project6.jpg" alt="Project" width="360" />
+									<picture>
+										<source
+											media="(min-width: 1200px)"
+											srcset="
+												./images/project/courses-lg.jpg    1x,
+												./images/project/courses-lg@2x.jpg 2x
+											"
+											type="image/jpeg"
+										/>
+										<source
+											media="(min-width: 768px)"
+											srcset="
+												./images/project/courses-md.jpg    1x,
+												./images/project/courses-md@2x.jpg 2x
+											"
+											type="image/jpeg"
+										/>
+										<img
+											srcset="
+												./images/project/courses-sm.jpg    1x,
+												./images/project/courses-sm@2x.jpg 2x
+											"
+											src="./images/project/courses-sm.jpg"
+											alt="Online Courses"
+										/>
+									</picture>
 									<div class="projects-overlay">
 										<div class="projects-actions">
 											<p class="projects-desc"
@@ -187,7 +401,32 @@
 						<li class="projects-item">
 							<a href="#" class="projects-link decor">
 								<div class="projects-thumb">
-									<img src="./images/project/project7.jpg" alt="Project" width="360" />
+									<picture>
+										<source
+											media="(min-width: 1200px)"
+											srcset="
+												./images/project/stories-lg.jpg    1x,
+												./images/project/stories-lg@2x.jpg 2x
+											"
+											type="image/jpeg"
+										/>
+										<source
+											media="(min-width: 768px)"
+											srcset="
+												./images/project/stories-md.jpg    1x,
+												./images/project/stories-md@2x.jpg 2x
+											"
+											type="image/jpeg"
+										/>
+										<img
+											srcset="
+												./images/project/stories-sm.jpg    1x,
+												./images/project/stories-sm@2x.jpg 2x
+											"
+											src="./images/project/stories-sm.jpg"
+											alt="Instagram Stories Concept"
+										/>
+									</picture>
 									<div class="projects-overlay">
 										<div class="projects-actions">
 											<p class="projects-desc"
@@ -206,7 +445,23 @@
 						<li class="projects-item">
 							<a href="#" class="projects-link decor">
 								<div class="projects-thumb">
-									<img src="./images/project//project8.jpg" alt="Project" width="360" />
+									<picture>
+										<source
+											media="(min-width: 1200px)"
+											srcset="./images/project/food-lg.jpg 1x, ./images/project/food-lg@2x.jpg 2x"
+											type="image/jpeg"
+										/>
+										<source
+											media="(min-width: 768px)"
+											srcset="./images/project/food-md.jpg 1x, ./images/project/food-md@2x.jpg 2x"
+											type="image/jpeg"
+										/>
+										<img
+											srcset="./images/project/food-sm.jpg 1x, ./images/project/food-sm@2x.jpg 2x"
+											src="./images/project/food-sm.jpg"
+											alt="Organic Food"
+										/>
+									</picture>
 									<div class="projects-overlay">
 										<div class="projects-actions">
 											<p class="projects-desc"
@@ -225,7 +480,32 @@
 						<li class="projects-item">
 							<a href="#" class="projects-link decor">
 								<div class="projects-thumb">
-									<img src="./images/project/project9.jpg" alt="Project" width="360" />
+									<picture>
+										<source
+											media="(min-width: 1200px)"
+											srcset="
+												./images/project/coffee-lg.jpg    1x,
+												./images/project/coffee-lg@2x.jpg 2x
+											"
+											type="image/jpeg"
+										/>
+										<source
+											media="(min-width: 768px)"
+											srcset="
+												./images/project/coffee-md.jpg    1x,
+												./images/project/coffee-md@2x.jpg 2x
+											"
+											type="image/jpeg"
+										/>
+										<img
+											srcset="
+												./images/project/coffee-sm.jpg    1x,
+												./images/project/coffee-sm@2x.jpg 2x
+											"
+											src="./images/project/coffee-sm.jpg"
+											alt="Fresh Coffee"
+										/>
+									</picture>
 									<div class="projects-overlay">
 										<div class="projects-actions">
 											<p class="projects-desc"
@@ -303,5 +583,12 @@
 				</div>
 			</div>
 		</footer>
+		<script
+			defer
+			src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+			integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+			crossorigin="anonymous"
+		></script>
+		<script src="./js/mobile-menu.js"></script>
 	</body>
 </html>

@@ -1,0 +1,25 @@
+@media screen and (min-width: 768px) {
+	.filter-list {
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 72px;
+	}
+	.filter-item:not(:last-child) {
+		margin-right: var(--card-gap);
+	}
+}
+@media screen and (min-width: 768px) {
+	.projects-list {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.projects-item {
+		border-radius: var(--radius);
+	}
+	.projects-item:not(:nth-child(3n)) {
+		margin-right: var(--card-gap);
+	}
+	.projects-item:not(:nth-last-child(-n + 3)) {
+		margin-bottom: var(--card-gap);
+	}
+}

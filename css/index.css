@@ -68,6 +68,14 @@
 .team {
 	background-color: var(--text-cloud-color);
 }
+@media screen and (max-width: 767.98px) {
+	.team-list {
+		text-align: center;
+	}
+	.team-item {
+		display: inline-block;
+	}
+}
 .team-list {
 	text-align: center;
 }
@@ -104,7 +112,7 @@
 .team-social-list {
 	display: flex;
 	flex-wrap: wrap;
-  justify-content: center;
+	justify-content: center;
 }
 .team-social-item:not(:last-child) {
 	margin-right: 24px;
@@ -157,11 +165,11 @@
 		margin-right: 16px;
 	}
 }
-  @media (min-width:426px) and (max-width: 767.98px) {
-    .customers-item:nth-last-child(-n + 2){
-      margin-bottom: 0;
-    }
-  }
+@media (min-width: 426px) and (max-width: 767.98px) {
+	.customers-item:nth-last-child(-n + 2) {
+		margin-bottom: 0;
+	}
+}
 .customers-link {
 	display: flex;
 	justify-content: center;

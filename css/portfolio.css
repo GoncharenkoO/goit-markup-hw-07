@@ -1,7 +1,7 @@
 /****************** Page Filter *******************/
-.section.portfolio {
+/* .section.portfolio {
 	padding-top: 96px;
-}
+} */
 .portfolio-title {
 	font-weight: 700;
 	font-size: 56px;
@@ -10,12 +10,9 @@
 }
 .filter-list {
 	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin-bottom: 72px;
-}
-.filter-item:not(:last-child) {
-	margin-right: var(--card-gap);
+	flex-wrap: wrap;
+	margin-bottom: 48px;
+	gap: 24px;
 }
 .button {
 	min-width: 69px;
@@ -30,7 +27,8 @@
 	color: var(--iris-color);
 	background-color: var(--text-cloud-color);
 
-	transition: color var(--time-function), background-color var(--time-function), box-shadow var(--time-function), border-color var(--time-function);
+	transition: color var(--time-function), background-color var(--time-function),
+		box-shadow var(--time-function), border-color var(--time-function);
 }
 .button:hover,
 .button:focus {
@@ -41,18 +39,17 @@
 }
 
 /****************** Page Projects *******************/
-.projects-list {
-	display: flex;
-	flex-wrap: wrap;
+@media screen and (max-width: 767.98px) {
+	.projects-list {
+		text-align: center;
+	}
+	.projects-item {
+		display: inline-block;
+	}
 }
-.projects-item {
-	border-radius: var(--radius);
-}
-.projects-item:not(:nth-child(3n)) {
-	margin-right: var(--card-gap);
-}
-.projects-item:not(:nth-last-child(-n + 3)) {
-	margin-bottom: var(--card-gap);
+
+.projects-item:not(:last-child) {
+	margin-bottom: 48px;
 }
 .projects-link {
 	display: block;

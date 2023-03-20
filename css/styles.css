@@ -152,8 +152,12 @@ button {
 }
 
 /****************** Page Header *******************/
+@media screen and (max-width: 767.98px) {
+	.page-header {
+		padding: 24px 0;
+	}
+}
 .page-header {
-	padding: 24px 0;
 	border-bottom: var(--border-value);
 }
 .nav-header {
@@ -184,7 +188,7 @@ button {
 	}
 }
 .header-mobile-menu {
-  display: block;
+	display: block;
 	padding: 0;
 	margin-left: auto;
 	background-color: transparent;
@@ -196,6 +200,11 @@ button {
 .mobile-menu-icon {
 	display: block;
 	stroke: currentColor;
+}
+@media screen and (min-width: 768px) {
+	.header-mobile-menu {
+		display: none;
+	}
 }
 
 /****************** Page Footer *******************/
