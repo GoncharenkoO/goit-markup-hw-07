@@ -152,6 +152,11 @@
 	justify-content: center;
 }
 
+@media (max-width: 425.98px) {
+	.customers-item:not(:last-child) {
+		margin-bottom: var(--mobile-gap);
+	}
+}
 @media screen and (min-width: 442px) and (max-width: 767.98px) {
 	.customers-item:not(:nth-child(2n)) {
 		margin-right: 16px;

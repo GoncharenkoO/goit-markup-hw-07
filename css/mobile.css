@@ -119,3 +119,36 @@
 		display: none;
 	}
 }
+.team-social-link {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background-color: var(--iris-color);
+
+	transition: background-color var(--time-function);
+}
+.team-social-link:hover,
+.team-social-link:focus {
+	animation: shake 2s linear;
+	background-color: var(--ocean-color);
+}
+@keyframes shake {
+	0%,
+	50%,
+	100% {
+		transform: rotate(0deg);
+	}
+
+	10%,
+	30% {
+		transform: rotate(-10deg);
+	}
+
+	20%,
+	40% {
+		transform: rotate(10deg);
+	}
+}

@@ -2,9 +2,24 @@
 	.contacts-list {
 		flex-direction: row;
 	}
+	.contacts-list .link {
+		font-size: 16px;
+		line-height: 1.5; /* 24/16 */
+	}
+	.contacts-item:not(:last-child) {
+		margin-right: 40px;
+	}
 }
 @media screen and (min-width: 1200px) {
 	.filter-list {
 		margin-bottom: 72px;
+	}
+}
+@media screen and (min-width: 1200px) {
+	.projects-item:not(:nth-child(3n)) {
+		margin-right: var(--card-gap);
+	}
+	.projects-item:not(:nth-last-child(-n + 3)) {
+		margin-bottom: var(--card-gap);
 	}
 }

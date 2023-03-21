@@ -32,7 +32,15 @@
 		margin: 0 auto 48px;
 	}
 }
+
 @media screen and (min-width: 1200px) {
+	.advantages-list {
+		flex-wrap: nowrap;
+		gap: var(--card-gap);
+	}
+	.advantages-item {
+		max-width: 264px;
+	}
 	.advantages-item::before {
 		display: block;
 		content: "";
@@ -46,20 +54,24 @@
 		border-radius: var(--radius);
 	}
 	.icon-antenna::before {
-		background-image: url(../images/advantages/antenna.svg);
+		background-image: url(../../images/advantages/antenna.svg);
 	}
 	.icon-clock::before {
-		background-image: url(../images/advantages/clock.svg);
+		background-image: url(../../images/advantages/clock.svg);
 	}
 	.icon-diagram::before {
-		background-image: url(../images/advantages/diagram.svg);
+		background-image: url(../../images/advantages/diagram.svg);
 	}
 	.icon-astronaut::before {
-		background-image: url(../images/advantages/astronaut.svg);
+		background-image: url(../../images/advantages/astronaut.svg);
 	}
-	.advantages-item {
-		/* max-width: 264px; */
-		/* flex-basis: calc((100% - 24px) / 2); */
+	.advantages-title {
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 1.2; /* 24/20 */
+	}
+	.advantages-text {
+		font-weight: 400;
 	}
 }
 @media screen and (min-width: 1200px) {
@@ -76,11 +88,17 @@
 	}
 }
 @media screen and (min-width: 1200px) {
-	.customers {
-		padding-bottom: 132px;
+	.customers-item:not(:last-child) {
+		margin-right: 24px;
 	}
 }
 @media screen and (min-width: 1200px) {
+  .footer-container {
+    flex-wrap: nowrap;
+  }
+  .footer-form {
+	flex-wrap: nowrap;
+}
 	.footer-text {
 		max-width: 264px;
 	}
