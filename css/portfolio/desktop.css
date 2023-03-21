@@ -1,0 +1,10 @@
+@media screen and (min-width: 1200px) {
+	.contacts-list {
+		flex-direction: row;
+	}
+}
+@media screen and (min-width: 1200px) {
+	.filter-list {
+		margin-bottom: 72px;
+	}
+}

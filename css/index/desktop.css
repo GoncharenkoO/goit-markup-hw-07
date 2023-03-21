@@ -1,4 +1,17 @@
 @media screen and (min-width: 1200px) {
+	.contacts-list {
+		flex-direction: row;
+	}
+	.contacts-list .link {
+		font-size: 16px;
+		line-height: 1.5; /* 24/16 */
+	}
+	.contacts-item:not(:last-child) {
+		margin-right: 40px;
+	}
+}
+
+@media screen and (min-width: 1200px) {
 	.hero {
 		padding: 188px 0;
 		background-image: linear-gradient(to right, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
@@ -44,7 +57,7 @@
 	.icon-astronaut::before {
 		background-image: url(../images/advantages/astronaut.svg);
 	}
-  .advantages-item {
+	.advantages-item {
 		/* max-width: 264px; */
 		/* flex-basis: calc((100% - 24px) / 2); */
 	}
@@ -60,5 +73,27 @@
 	.technologies-item:not(:last-child),
 	.team-item:not(:last-child) {
 		margin-right: var(--card-gap);
+	}
+}
+@media screen and (min-width: 1200px) {
+	.customers {
+		padding-bottom: 132px;
+	}
+}
+@media screen and (min-width: 1200px) {
+	.footer-text {
+		max-width: 264px;
+	}
+	.footer-info-list {
+		margin-right: 120px;
+	}
+	.footer-social-list {
+		margin-right: 80px;
+	}
+	.footer-label {
+		margin-right: 24px;
+	}
+	.footer-mail {
+		width: 264px;
 	}
 }

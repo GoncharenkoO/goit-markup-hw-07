@@ -210,16 +210,42 @@ button {
 /****************** Page Footer *******************/
 .footer-page {
 	padding: 100px 0;
-
 	background-color: var(--primary-color-text);
+}
+@media screen and (max-width: 1157px) {
+	.footer-page {
+		padding-top: 96px;
+		padding-bottom: 96px;
+	}
 }
 .footer-container {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 }
-.footer-info-list {
-	margin-bottom: var(--mobile-gap);
+@media screen and (min-width: 768px) {
+  .footer-container {
+	justify-content: flex-start;
+  padding-left: 108px;
+}
+}
+@media screen and (max-width: 767.98px) {
+	.footer-info-list {
+		margin-bottom: var(--mobile-gap);
+	}
+	.footer-social-list {
+		text-align: center;
+		margin-bottom: var(--mobile-gap);
+	}
+	.footer-logo {
+		text-align: center;
+	}
+	.footer-desc {
+		text-align: center;
+	}
+	.footer-label {
+		margin-bottom: 16px;
+	}
 }
 .footer-logo {
 	display: block;
@@ -230,7 +256,6 @@ button {
 	letter-spacing: 0.03em;
 	text-transform: uppercase;
 	color: var(--iris-color);
-	text-align: center;
 }
 .footer-logo .sign {
 	color: var(--text-cloud-color);
@@ -245,10 +270,7 @@ button {
 	letter-spacing: 0.02em;
 	color: var(--text-cornflower-color);
 }
-.footer-social-list {
-	text-align: center;
-	margin-bottom: var(--mobile-gap);
-}
+
 .footer-desc {
 	margin-bottom: 16px;
 	font-weight: 500;
@@ -256,7 +278,6 @@ button {
 	line-height: 1.5; /* 24/16 */
 	letter-spacing: 0.02em;
 	color: var(--main-white-color);
-	text-align: center;
 }
 .social-list {
 	display: flex;
@@ -309,9 +330,6 @@ button {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-}
-.footer-label {
-	margin-bottom: 16px;
 }
 .footer-mail {
 	width: 292px;
