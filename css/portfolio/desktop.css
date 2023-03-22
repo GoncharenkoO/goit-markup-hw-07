@@ -23,3 +23,26 @@
 		margin-bottom: var(--card-gap);
 	}
 }
+@media screen and (min-width: 1200px) {
+  .footer-container {
+    flex-wrap: nowrap;
+  }
+  .footer-form {
+	flex-wrap: nowrap;
+}
+	.footer-text {
+		max-width: 264px;
+	}
+	.footer-info-list {
+		margin-right: 120px;
+	}
+	.footer-social-list {
+		margin-right: 80px;
+	}
+	.footer-label {
+		margin-right: 24px;
+	}
+	.footer-mail {
+		width: 264px;
+	}
+}
