@@ -83,9 +83,24 @@
 		margin-bottom: var(--card-gap);
 	}
 }
+@media screen and (min-width: 768px) {
+	.footer-container {
+		display: flex;
+		flex-wrap: wrap;
+	}
+  .footer-form {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+	.footer-mail {
+		width: 264px;
+	}
+}
 @media screen and (min-width: 768px) and (max-width: 1199.98px) {
 	.footer-container {
 		gap: var(--mobile-gap) var(--card-gap);
+    max-width: 530px;
 	}
 	.footer-label {
 		margin-right: 24px;

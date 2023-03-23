@@ -23,6 +23,10 @@
 		screen and (min-width: 1200px) and (min-resolution: 192dpi),
 		screen and (min-width: 1200px) and (min-resolution: 2dppx) {
 		.hero {
+			max-width: 1440px;
+			min-height: 600px;
+			margin-right: auto;
+			margin-left: auto;
 			background-image: linear-gradient(to right, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
 				url(../../images/hero/hero-fon@2x.jpg);
 		}
@@ -93,12 +97,12 @@
 	}
 }
 @media screen and (min-width: 1200px) {
-  .footer-container {
-    flex-wrap: nowrap;
-  }
-  .footer-form {
-	flex-wrap: nowrap;
-}
+	.footer-container {
+		flex-wrap: nowrap;
+	}
+	.footer-form {
+		flex-wrap: nowrap;
+	}
 	.footer-text {
 		max-width: 264px;
 	}
