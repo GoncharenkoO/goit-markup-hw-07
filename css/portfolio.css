@@ -33,7 +33,7 @@
 	color: var(--main-white-color);
 	background-color: var(--ocean-color);
 	box-shadow: var(--btn-filter);
-}
+} 
 
 /****************** Page Projects *******************/
 @media screen and (max-width: 767.98px) {

@@ -1,5 +1,6 @@
 /****************** Page Hero *******************/
 .hero {
+  max-width: 480px;
 	padding: 112px 0;
 	margin-right: auto;
 	margin-left: auto;
@@ -157,7 +158,7 @@
 		margin-bottom: var(--mobile-gap);
 	}
 }
-@media screen and (min-width: 442px) and (max-width: 767.98px) {
+@media screen and (min-width: 428px) and (max-width: 767.98px) {
 	.customers-item:not(:nth-child(2n)) {
 		margin-right: 16px;
 	}
@@ -174,7 +175,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 198px;
+	width: 190px;
 	height: 88px;
 	border: 1px solid currentColor;
 	border-radius: var(--radius);
