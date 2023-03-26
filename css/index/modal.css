@@ -49,10 +49,12 @@
 }
 .modal-icon:hover,
 .modal-icon:focus {
-	fill: var(--main-white-color);
+	color: var(--main-white-color);
 	background-color: var(--ocean-color);
 }
-
+.close {
+	fill: currentColor;
+}
 .modal-text {
 	margin-bottom: 16px;
 	font-weight: 500;
