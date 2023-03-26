@@ -52,6 +52,7 @@
 	fill: var(--main-white-color);
 	background-color: var(--ocean-color);
 }
+
 .modal-text {
 	margin-bottom: 16px;
 	font-weight: 500;
