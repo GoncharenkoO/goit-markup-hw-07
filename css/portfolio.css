@@ -33,7 +33,7 @@
 	color: var(--main-white-color);
 	background-color: var(--ocean-color);
 	box-shadow: var(--btn-filter);
-} 
+}
 
 /****************** Page Projects *******************/
 @media screen and (max-width: 767.98px) {
@@ -43,10 +43,9 @@
 	.projects-item {
 		display: inline-block;
 	}
-}
-
-.projects-item:not(:last-child) {
+  .projects-item:not(:last-child) {
 	margin-bottom: 48px;
+}
 }
 .projects-link {
 	display: block;

@@ -82,6 +82,9 @@
 	.projects-item:not(:nth-last-child(-n + 2)) {
 		margin-bottom: var(--card-gap);
 	}
+  	.projects-item:last-child {
+		margin-right: 0;
+	}
 }
 @media screen and (min-width: 768px) {
 	.footer-container {

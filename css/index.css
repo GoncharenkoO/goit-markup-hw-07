@@ -1,6 +1,7 @@
 /****************** Page Hero *******************/
 .hero {
-  max-width: 480px;
+  max-width: 428px;
+  height: 432px;
 	padding: 112px 0;
 	margin-right: auto;
 	margin-left: auto;
